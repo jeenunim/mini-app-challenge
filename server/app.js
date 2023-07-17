@@ -29,6 +29,13 @@ app.post('/movies', async (req, res) => {
     }
 })
 
+app.delete('/movies', (req, res) => {
+    knex('movies').where({id: req.body.name}).del()
+        .then(function() {
+            res.json("Deleted Successfully")
+        })
+})
+
 app.listen(port, () => {
     console.log(`listening on port ${port}`)
 })
