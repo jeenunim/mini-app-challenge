@@ -6,7 +6,7 @@
 module.exports = {
 
   development: {
-    client: 'postgres',
+    client: 'pg',
     connection: 'postgres://postgres:docker@localhost/movies'
   },
 
